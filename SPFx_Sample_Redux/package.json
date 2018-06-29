@@ -23,7 +23,12 @@
     "@microsoft/sp-lodash-subset": "~1.1.0",
     "@microsoft/sp-office-ui-fabric-core": "~1.4.0-0",
     "@types/webpack-env": "1.13.1",
-    "@types/es6-promise": "0.0.33"
+    "@types/es6-promise": "0.0.33",
+    "immutable": "^3.8.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "~1.1.0",
@@ -32,6 +37,8 @@
     "gulp": "~3.9.1",
     "@types/chai": "3.4.34",
     "@types/mocha": "2.2.38",
-    "ajv": "~5.2.2"
+    "ajv": "~5.2.2",
+    "@types/react-redux": "^4.4.45",
+    "@types/redux-logger": "^3.0.0"
   }
 }
