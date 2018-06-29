@@ -4,7 +4,11 @@ import { connect } from 'react-redux';
 import { ListState } from '../state/ListState';
 import { SPHttpClient } from '@microsoft/sp-http';
 import App from '../components/SpFxSampleRedux';
-import * as Actions from '../actions/ListActions';
+import * as Actions from '../actions/SPFxActions';
+
+import { getLists } from '../api/getLists';
+import { addList } from '../api/addList';
+import { getLibraryItems } from '../api/getLibraryItems';
 
 export interface ISPFxProps {
   store: Store<ListState>;
@@ -16,7 +20,8 @@ export interface ISPFxProps {
 
 export interface IConnectedDispatch {
   updateTitle: (title: string) => void;
-  getLists: (spHttpClient: SPHttpClient, currentWebUrl: string) => void;
+  // getLists: (spHttpClient: SPHttpClient, currentWebUrl: string) => void;
+  getLibraryItems: (spHttpClient: SPHttpClient, currentWebUrl: string, libraryName: string) => void;
   addList: (spHttpClient: SPHttpClient, currentWebUrl: string, listtitle: string) => void;
 }
 
@@ -41,11 +46,12 @@ export const mapDispatchToProps = (dispatch: Dispatch<ListState>): IConnectedDis
   updateTitle: (title: string) => {
     dispatch(Actions.updateTitle(title));
   },
-  getLists: (spHttpClient: SPHttpClient, currentWebUrl: string) => {
-    dispatch(Actions.getLists(spHttpClient, currentWebUrl));
+  getLibraryItems: (spHttpClient: SPHttpClient, currentWebUrl: string, libraryName: string) => {
+    // dispatch(getLists(spHttpClient, currentWebUrl));
+    dispatch(getLibraryItems(spHttpClient, currentWebUrl, libraryName));
   },
   addList: (spHttpClient: SPHttpClient, currentWebUrl: string, listtitle: string) => {
-    dispatch(Actions.addList(spHttpClient, currentWebUrl, listtitle));
+    dispatch(addList(spHttpClient, currentWebUrl, listtitle));
   }
 });
 

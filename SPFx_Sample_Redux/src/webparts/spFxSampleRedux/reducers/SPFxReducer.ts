@@ -1,4 +1,4 @@
-import { Action, ActionTypes } from '../actions/SPFxAction';
+import { Action, ActionTypes } from '../actions/SPFxActionType';
 import { ListState } from '../state/ListState';
 import { Reducer } from 'redux';
 
@@ -19,6 +19,12 @@ const SPFxReducer: Reducer<ListState> = (state: ListState = initState, action: A
       return state.setLists(action.payload);
     case ActionTypes.GET_LISTS_ERROR:
       return state; //.setMessage(action.payload); //You can show an error message here
+    case ActionTypes.GET_LIBRARYITEMS_REQUEST:
+      return state;
+    case ActionTypes.GET_LIBRARYITEMS_SUCCESS:
+      return state.setLists(action.payload);
+    case ActionTypes.GET_LIBRARYITEMS_ERROR:
+      return state;
     case ActionTypes.UPDATE_TITLE:
       return state.setTitle(action.payload);
     default: return state;

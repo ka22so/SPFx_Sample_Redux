@@ -38,6 +38,7 @@ export default class SpFxSampleRedux extends React.Component<ISPFxType, {}> {
   }
 
   private componentDidMount() {
-    this.props.getLists(this.props.spHttpClient, this.props.currentWebUrl);
+    // this.props.getLists(this.props.spHttpClient, this.props.currentWebUrl);
+    this.props.getLibraryItems(this.props.spHttpClient, this.props.currentWebUrl, this.props.libraryName);
   }
 }

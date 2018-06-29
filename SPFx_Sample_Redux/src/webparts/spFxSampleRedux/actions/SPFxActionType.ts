@@ -5,6 +5,9 @@ export enum ActionTypes {
   GET_LISTS_REQUEST,
   GET_LISTS_SUCCESS,
   GET_LISTS_ERROR,
+  GET_LIBRARYITEMS_REQUEST,
+  GET_LIBRARYITEMS_SUCCESS,
+  GET_LIBRARYITEMS_ERROR,
   UPDATE_TITLE,
 }
 
@@ -15,4 +18,7 @@ export type Action =
   { type: ActionTypes.GET_LISTS_REQUEST } |
   { type: ActionTypes.GET_LISTS_SUCCESS, payload: string[] } |
   { type: ActionTypes.GET_LISTS_ERROR, payload: string } |
+  { type: ActionTypes.GET_LIBRARYITEMS_REQUEST } |
+  { type: ActionTypes.GET_LIBRARYITEMS_SUCCESS, payload: string[] } |
+  { type: ActionTypes.GET_LIBRARYITEMS_ERROR, payload: string } |
   { type: ActionTypes.UPDATE_TITLE, payload: string };

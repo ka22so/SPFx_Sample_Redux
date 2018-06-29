@@ -21,7 +21,7 @@
     "officeFabricIconFontName": "Page",
     "properties": {
       "description": "SPFx_Sample_Redux",
-      "libraryName": "Shared Documents"
+      "libraryName": "Documents"
     }
   }]
 }
