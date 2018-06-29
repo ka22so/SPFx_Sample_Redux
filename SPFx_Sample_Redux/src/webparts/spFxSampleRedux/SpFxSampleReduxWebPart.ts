@@ -9,7 +9,11 @@ import {
 
 import * as strings from 'SpFxSampleReduxWebPartStrings';
 import SpFxSampleRedux from './components/SpFxSampleRedux';
-import { ISpFxSampleReduxProps } from './components/ISpFxSampleReduxProps';
+import Container, { ISPFxProps } from './containers/SPFxContainer';
+
+import configureStore from './store/SPFxStore';
+import { Provider } from 'react-redux';
+const store = configureStore();
 
 export interface ISpFxSampleReduxWebPartProps {
   description: string;
@@ -18,11 +22,16 @@ export interface ISpFxSampleReduxWebPartProps {
 export default class SpFxSampleReduxWebPart extends BaseClientSideWebPart<ISpFxSampleReduxWebPartProps> {
 
   public render(): void {
-    const element: React.ReactElement<ISpFxSampleReduxProps > = React.createElement(
-      SpFxSampleRedux,
-      {
-        description: this.properties.description
-      }
+    const element: React.ReactElement<ISPFxProps > = React.createElement(
+      typeof Provider, null, React.createElement(
+        Container,
+        {
+          store: store,
+          description: this.properties.description,
+          spHttpClient: this.context.spHttpClient,
+          currentWebUrl: this.context.pageContext.web.serverRelativeUrl
+        }
+      )
     );
 
     ReactDom.render(element, this.domElement);
