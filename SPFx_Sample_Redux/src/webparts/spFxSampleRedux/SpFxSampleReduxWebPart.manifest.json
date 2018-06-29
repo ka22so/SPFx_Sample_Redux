@@ -20,7 +20,8 @@
     "description": { "default": "SPFx_Sample_Redux description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "SPFx_Sample_Redux"
+      "description": "SPFx_Sample_Redux",
+      "libraryName": "Shared Documents"
     }
   }]
 }

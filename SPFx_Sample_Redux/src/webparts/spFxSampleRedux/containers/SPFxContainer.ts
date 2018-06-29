@@ -9,6 +9,7 @@ import * as Actions from '../actions/ListActions';
 export interface ISPFxProps {
   store: Store<ListState>;
   description: string;
+  libraryName: string;
   spHttpClient: SPHttpClient;
   currentWebUrl: string;
 }

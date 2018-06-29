@@ -4,11 +4,13 @@ import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
-  PropertyPaneTextField
+  PropertyPaneTextField,
+  // PropertyPaneCheckbox,
+  // PropertyPaneDropdown,
+  // PropertyPaneToggle
 } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'SpFxSampleReduxWebPartStrings';
-import SpFxSampleRedux from './components/SpFxSampleRedux';
 import Container, { ISPFxProps } from './containers/SPFxContainer';
 
 import configureStore from './store/SPFxStore';
@@ -17,6 +19,7 @@ const store = configureStore();
 
 export interface ISpFxSampleReduxWebPartProps {
   description: string;
+  libraryName: string;
 }
 
 export default class SpFxSampleReduxWebPart extends BaseClientSideWebPart<ISpFxSampleReduxWebPartProps> {
@@ -28,6 +31,7 @@ export default class SpFxSampleReduxWebPart extends BaseClientSideWebPart<ISpFxS
         {
           store: store,
           description: this.properties.description,
+          libraryName: this.properties.libraryName,
           spHttpClient: this.context.spHttpClient,
           currentWebUrl: this.context.pageContext.web.serverRelativeUrl
         }
@@ -58,6 +62,9 @@ export default class SpFxSampleReduxWebPart extends BaseClientSideWebPart<ISpFxS
               groupFields: [
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel
+                }),
+                PropertyPaneTextField('libraryName', {
+                  label: 'LibraryName'
                 })
               ]
             }
