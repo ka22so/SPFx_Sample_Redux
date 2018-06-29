@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "sp-fx-sample-redux-client-side-solution",
+    "id": "5f5a31e0-388b-4229-bdbf-dd0a1398b66a",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/sp-fx-sample-redux.sppkg"
+  }
+}

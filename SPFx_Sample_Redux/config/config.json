@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spFxSampleRedux/SpFxSampleReduxWebPart.js",
+      "manifest": "./src/webparts/spFxSampleRedux/SpFxSampleReduxWebPart.manifest.json",
+      "outputPath": "./dist/sp-fx-sample-redux-web-part.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "SpFxSampleReduxWebPartStrings": "webparts/spFxSampleRedux/loc/{locale}.js"
+  }
+}
