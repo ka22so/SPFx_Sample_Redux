@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Dispatch, Store } from 'redux';
 import { connect } from 'react-redux';
-import { ListState } from '../state/ListState';
+import { ListState } from '../state/SPFxState';
 import { SPHttpClient } from '@microsoft/sp-http';
 import App from '../components/SpFxSampleRedux';
 import * as Actions from '../actions/SPFxActions';

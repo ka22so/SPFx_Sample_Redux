@@ -2,7 +2,7 @@ import { createStore, applyMiddleware, Store } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import SPFxReducer from '../reducers/SPFxReducer';
-import { ListState } from '../state/ListState';
+import { ListState } from '../state/SPFxState';
 
 const loggerMiddleware = createLogger();
 

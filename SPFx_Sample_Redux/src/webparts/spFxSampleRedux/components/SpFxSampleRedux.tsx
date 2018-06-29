@@ -4,6 +4,8 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import { ISPFxType } from '../containers/SPFxContainer';
 
+import { GroupedListBasicExample } from '../components/GroupedList';
+
 export default class SpFxSampleRedux extends React.Component<ISPFxType, {}> {
   public render(): React.ReactElement<ISPFxType> {
     return (
@@ -26,6 +28,7 @@ export default class SpFxSampleRedux extends React.Component<ISPFxType, {}> {
             </div>
           </div>
         </div>
+        <GroupedListBasicExample />
       </div>
     );
   }

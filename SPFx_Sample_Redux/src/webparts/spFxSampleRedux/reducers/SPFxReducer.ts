@@ -1,5 +1,5 @@
 import { Action, ActionTypes } from '../actions/SPFxActionType';
-import { ListState } from '../state/ListState';
+import { ListState } from '../state/SPFxState';
 import { Reducer } from 'redux';
 
 const initState = new ListState();
